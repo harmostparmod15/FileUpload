@@ -25,5 +25,5 @@ app.use("/api/v1/upload", upload);
 
 // activate server
 app.listen(PORT, () => {
-  console.log(`server started at port : {PORT}`);
+  console.log(`server started at port : ${PORT}`);
 });
