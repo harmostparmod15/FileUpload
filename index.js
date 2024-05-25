@@ -12,7 +12,12 @@ const app = express();
 app.use(express.json());
 
 // file upload middleware
-app.use(fileUpload());
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: "/tmp/",
+  })
+);
 
 // mongodb connection
 db.connectDb();
